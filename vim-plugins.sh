@@ -5,11 +5,11 @@ git clone git://github.com/scrooloose/nerdtree.git ~/.vim/pack/trinne/start/nerd
 vim -u NONE -c "helptags ~/.vim/pack/trinne/start/nerdtree/doc" -c q
 
 # https://vimawesome.com/plugin/surround-vim
-git clone git://tpope.io/vim/surround.git ~/.vim/pack/trinne/start/surround
+git clone git://github.com/tpope/vim-surround.git ~/.vim/pack/trinne/start/surround
 vim -u NONE -c "helptags ~/.vim/pack/trinne/start/surround/doc" -c q
 
 # https://vimawesome.com/plugin/vim-fireplace
-git clone git://tpope.io/vim/fireplace.git ~/.vim/pack/trinne/start/fireplace
+git clone git://github.com/tpope/vim-fireplace.git ~/.vim/pack/trinne/start/fireplace
 vim -u NONE -c "helptags ~/.vim/pack/trinne/start/fireplace/doc" -c q
 
 # https://vimawesome.com/plugin/vim-salve
