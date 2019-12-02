@@ -7,4 +7,8 @@ Execute `bash ~/dotfiles/vim-plugins.sh` and create a symlink for the vimrc `ln 
 
 ## VIM
 `vim-plugins.sh` is a bash-script for installing some basic vim-plugins to use with coding with Vim.
-`vimrc` is a vimrc-configuration that gives some sensible defaults fot Vim. It is based on basic.vim from https://github.com/amix/vimrc
+`vimrc` is a vimrc-configuration that gives some sensible defaults for Vim. It is based on basic.vim from https://github.com/amix/vimrc
+
+## TMUX
+`tmux.conf` is a tmux.conf configuration that gives some sensible defaults for tmux. It also adds Powerline-statusbar to the tmux
+(Powerline needs to be installed separately https://powerline.readthedocs.io/).
