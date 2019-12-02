@@ -30,7 +30,7 @@ command! W w !sudo tee % > /dev/null
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set linenumbers relative to the row with cursor
-set nonumber
+set number
 set relativenumber
 
 " Set 7 lines to the cursor - when moving vertically using j/k
@@ -355,7 +355,7 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
