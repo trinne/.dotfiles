@@ -36,3 +36,6 @@ vim -u NONE -c "helptags ~/.vim/pack/trinne/start/indentline/doc" -c q
 git clone git://github.com/kien/rainbow_parentheses.vim.git ~/.vim/pack/trinne/start/rainbow_parentheses.vim
 vim -u NONE -c "helptags ~/.vim/pack/trinne/start/rainbow_parentheses.vim/doc" -c q
 
+# https://vimawesome.com/plugin/paredit-vim
+git clone https://github.com/vim-scripts/paredit.vim ~/.vim/pack/trinne/start/paredit.vim
+vim -u NONE -c "helptags ~/.vim/pack/trinne/start/paredit.vim/doc" -c q
