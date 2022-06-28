@@ -27,3 +27,15 @@ ZSH is insalled via `brew.sh`. Oh My Zsh is installed as well. `.zshrc` contains
 
 ## ShadowCLJS
 `.shadow-cljs/config.edn` contains packages and plugins for user. At the time of writing, this contains hashp
+
+## Links
+Execute `links.sh` to symlink .lein, .shadow-cljs, .zshrc and .vimrc. There is also some symlinking in the `brew.sh` for java and that is done right after the java installation.
+
+## Run order
+These scripts should be idempotent so that they can be run multiple times without problems. Of course `macos.sh` do have some settings that propably has no effects before `brew.sh` has installed some apps.
+My preferred order to run these scripts would be:
+1. `brew.sh`
+2. `macos.sh`
+3. `themes.sh`
+4. `vim-plugins.sh`
+5. `links.sh`
