@@ -1,0 +1,2 @@
+;;RUN shadow-cljs watch app --config-merge '{:devtools {:preloads [hashp.core]}}'
+{:dependencies [[hashp "0.2.1"]]}
