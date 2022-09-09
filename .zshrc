@@ -121,3 +121,4 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="/opt/homebrew/opt/awscli@1/bin:$PATH"
+export PATH="/Users/tuomas.rinne/.crc/bin/oc:$PATH"
