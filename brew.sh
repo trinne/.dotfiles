@@ -49,6 +49,7 @@ cli_apps=(
   httpie
   jq
   leiningen
+  odo
   openssl
   plantuml
   python
