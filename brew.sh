@@ -45,6 +45,7 @@ cli_apps=(
   ctop
   direnv
   git-remote-codecommit
+  gradle
   graphviz
   helm
   httpie
