@@ -46,6 +46,7 @@ cli_apps=(
   direnv
   git-remote-codecommit
   graphviz
+  helm
   httpie
   jq
   leiningen
