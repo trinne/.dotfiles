@@ -51,6 +51,7 @@ cli_apps=(
   httpie
   jq
   leiningen
+  mkdocs
   odo-dev
   openssl
   plantuml
