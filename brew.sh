@@ -79,6 +79,7 @@ chsh -s /bin/zsh
 # Apps
 apps=(
   alfred
+  docker
   firefox
   google-chrome
   rectangle
