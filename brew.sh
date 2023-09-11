@@ -57,6 +57,8 @@ cli_apps=(
   plantuml
   python
   romkatv/powerlevel10k/powerlevel10k
+  riprgep
+  tmux
   tree
 )
 brew install ${cli_apps[@]}
