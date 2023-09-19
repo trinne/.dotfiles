@@ -50,6 +50,7 @@ cli_apps=(
   helm
   httpie
   jq
+  k9s
   leiningen
   mkdocs
   odo-dev
