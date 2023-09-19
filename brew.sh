@@ -58,7 +58,9 @@ cli_apps=(
   python
   romkatv/powerlevel10k/powerlevel10k
   riprgep
+  stern
   tmux
+  tpm
   tree
 )
 brew install ${cli_apps[@]}
