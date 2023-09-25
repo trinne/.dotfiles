@@ -14,11 +14,6 @@ Execute `bash ~/dotfiles/macos.sh`. Sets up sensible defaults for MacOS.
 ## Themes
 Execute `bash ~/dotfiles/themes.sh`. Downloads and sets up Dracula theme for iTerm, Powerlevel10k and zsh. iTerm theme installation needs to be finished manually.
 
-## VIM
-Execute `bash ~/dotfiles/vim-plugins.sh`.
-`vim-plugins.sh` is a bash-script for installing some basic vim-plugins to use with coding with Vim.
-`.vimrc` is a configuration that gives some sensible defaults for Vim. It is based on basic.vim from https://github.com/amix/vimrc
-
 ## ZSH
 ZSH is insalled via `brew.sh`. Oh My Zsh is installed as well. `.zshrc` contains default .zshrc from Oh My Zsh plus jenv, nvm, theme, p10k and other setups for stuff installed in `brew.sh`
 

@@ -49,6 +49,7 @@ cli_apps=(
   graphviz
   helm
   httpie
+  jdtls
   jq
   k9s
   leiningen
