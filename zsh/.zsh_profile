@@ -1,0 +1,8 @@
+VIM="nvim"
+
+export GIT_EDITOR=$VIM
+
+PERSONAL=$HOME/.config/personal
+for i in `find -L $PERSONAL`; do
+    source $i
+done
