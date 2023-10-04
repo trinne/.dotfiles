@@ -1,0 +1,6 @@
+alias vim="$VIM"
+
+alias python="python3"
+
+alias scripts="cd $HOME/.dotfiles/bin/.local/scripts"
+
