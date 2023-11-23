@@ -4,3 +4,6 @@ alias python="python3"
 
 alias scripts="cd $HOME/.dotfiles/bin/.local/scripts"
 
+alias kc="kubectl"
+
+alias pf="kc port-forward"
