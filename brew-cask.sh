@@ -2,6 +2,7 @@
 
 # Apps
 apps=(
+  1password
   alfred
   docker
   firefox
