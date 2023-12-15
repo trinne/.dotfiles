@@ -8,6 +8,7 @@ apps=(
   firefox
   google-chrome
   intellij-idea
+  intellij-idea-ce
   iterm2
   min
   opera
