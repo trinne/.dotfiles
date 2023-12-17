@@ -1,2 +1,3 @@
-themes
-.lein/self-installs
+clj/.lein/self-installs
+tmux/.config/tmux/plugins
+
