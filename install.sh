@@ -116,6 +116,7 @@ fi
 
 # Install or update necessary tools
 tools=(
+  asdf
   awscli
   clojure
   ctop
@@ -166,14 +167,6 @@ check_git_repo_updates "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" "https://g
 check_git_repo_updates "$HOME/.nvm" "https://github.com/nvm-sh/nvm.git"
 check_git_repo_updates "$HOME/.jenv" "https://github.com/jenv/jenv.git"
 check_git_repo_updates "$HOME/.tmux/plugins/tpm" "https://github.com/tmux-plugins/tpm.git"
-
-# Install NVM
-if [ ! -d "$HOME/.nvm" ]; then
-    echo "Installing NVM..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-else
-    echo "NVM is already installed."
-fi
 
 # Set up dotfiles repository
 dotfiles_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
