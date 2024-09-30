@@ -190,7 +190,7 @@ if [ -f "$HOME/.zshrc" ]; then
   rm "$HOME/.zshrc"
 fi
 
-stow -v -d "$dotfiles_dir" -t "$HOME" zsh tmux nvim os clj alacritty
+stow -v -d "$dotfiles_dir" -t "$HOME" zsh tmux nvim os clj alacritty k9s
 
 # Set Zsh as the default shell
 chsh -s "$(which zsh)"
