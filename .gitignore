@@ -1,3 +1,4 @@
+*/**/.DS_Store
 clj/.lein/self-installs
 tmux/.config/tmux/plugins
 
