@@ -2,38 +2,17 @@
 
 # Function to install a package based on the package manager
 install_package() {
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        brew install $1
-    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        sudo apt-get install -y $1
-    else
-        echo "Unsupported operating system"
-        exit 1
-    fi
+    brew install $1
 }
 
 # Function to check the latest version of a package
 check_latest_version() {
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        brew info --json=v1 $1 | jq -r ".[0].versions.stable"
-    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        apt show $1 | grep Version | awk '{print $2}'
-    else
-        echo "Unsupported operating system"
-        exit 1
-    fi
+    brew info --json=v1 $1 | jq -r ".[0].versions.stable"
 }
 
 # Function to check the version of a package
 check_package_version() {
-    if [[ "$OSTYPE" == "darwin"* ]]; then
-        brew list --versions $1 | awk '{print $2}'
-    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        dpkg -l | grep -E "^ii.*$1" | awk '{print $3}'
-    else
-        echo "Unsupported operating system"
-        exit 1
-    fi
+    brew list --versions $1 | awk '{print $2}'
 }
 
 # Function to display information about a package
@@ -47,15 +26,7 @@ display_package_info() {
       package_info+="Current version: $current_version\n"
       package_info+="Latest version: $latest_version\n"
       package_info+="To update, run:\n"
-      if [[ "$OSTYPE" == "darwin"* ]]; then
-          package_info+="  brew upgrade $package_name\n"
-      elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-          package_info+="  sudo apt-get install --only-upgrade $package_name\n"
-      else
-          echo "Unsupported operating system"
-          exit 1
-      fi
-
+      package_info+="  brew upgrade $package_name\n"
       package_infos+=("$package_info")
     fi
 }
@@ -93,26 +64,25 @@ check_git_repo_updates() {
 }
 
 # Update package managers
-if [[ "$OSTYPE" == "darwin"* ]]; then
 
-    # Check for Homebrew,
-    # Install if we don't have it
-    if test ! $(which brew); then
-        echo "Installing homebrew..."
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Check for Homebrew,
+# Install if we don't have it
+if test ! $(which brew); then
+    echo "Installing homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	touch "/Users/$USER/.zprofile"
-	echo 'eval "$(/usr/local/bin/brew shellenv)"' >> "/Users/$USER/.zprofile"
-	eval "$(/usr/local/bin/brew shellenv)"
+	touch "$HOME/.zprofile"
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        echo 'eval "$(/usr/local/bin/brew shellenv)"' >> "$HOME/.zprofile"
+        eval "$(/usr/local/bin/brew shellenv)"
+    else
+        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> "$HOME/.zprofile"
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fi
-    
-    brew update
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    sudo apt-get update
-else
-    echo "Unsupported operating system"
-    exit 1
 fi
+    
+brew update
 
 # Install or update necessary tools
 tools=(
@@ -190,7 +160,7 @@ if [ -f "$HOME/.zshrc" ]; then
   rm "$HOME/.zshrc"
 fi
 
-stow -v -d "$dotfiles_dir" -t "$HOME" zsh tmux nvim os clj alacritty k9s
+stow -v -d "$dotfiles_dir" -t "$HOME" zsh tmux nvim os clj k9s
 
 # Set Zsh as the default shell
 chsh -s "$(which zsh)"
